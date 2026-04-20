@@ -1652,7 +1652,7 @@ const LEVEL_STYLE = {
 };
 
 const TOPIC_COLORS = {
-  "Core Concepts": "#60a5fa",
+  
   "Modules": "#a78bfa",
   "Worker Threads & Clustering": "#f472b6",
   "Error Handling": "#f87171",
