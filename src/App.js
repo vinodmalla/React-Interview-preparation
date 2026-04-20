@@ -1,6 +1,7 @@
 import React from 'react';
 import Jscsshtml from './Jscsshtml';
 import ReactInterviewQuestions from './ReactInterviewQuestions';
+import Backend from './Backend';
 import { createBrowserRouter, Outlet, NavLink } from 'react-router-dom';
 
 export default function App() {
@@ -9,7 +10,7 @@ export default function App() {
       textAlign: 'center',
       padding: '20px',
       fontFamily: 'Arial, sans-serif',
-      backgroundColor: '#f5f7fb',
+      backgroundColor: '#0c0c1e"',
       minHeight: '100vh',
     },
     heading: {
@@ -21,7 +22,7 @@ export default function App() {
       justifyContent: 'center',
       gap: '20px',
       marginBottom: '30px',
-      background: '#fff',
+      background: '#0c0c1e"',
       padding: '15px',
       borderRadius: '12px',
       boxShadow: '0 4px 10px rgba(0,0,0,0.08)',
@@ -66,6 +67,17 @@ export default function App() {
         >
           JS, CSS, HTML
         </NavLink>
+        <NavLink
+          to="/backend"
+          style={({ isActive }) =>
+            isActive
+              ? { ...styles.link, ...styles.activeLink }
+              : styles.link
+          }
+        >
+          Backend
+        </NavLink>
+
       </nav>
 
       <Outlet />
@@ -86,6 +98,10 @@ export const appRouter = createBrowserRouter([
         path: 'jscsshtml',
         element: <Jscsshtml />,
       },
+      {
+        path: 'backend',
+        element: <Backend />,
+      }
     ],
   },
 ]);
